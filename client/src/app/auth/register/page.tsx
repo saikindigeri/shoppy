@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image';
-import banner from '../../../../public/images/banner2.jpg'
+import banner from '../../../../public/images/lora.jpg'
 import { Label } from '@/components/ui/label';
-import logo from '../../../../public/images/logo1.png'
+import logo from '../../../../public/images/logoo.png'
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -47,26 +47,26 @@ const Reigster = () => {
         </div>
         <form  className="space-y-4">
           <div className="space-y-1">
-            <Label htmlFor="name">Full Name</Label>
+            <Label htmlFor="name" className='font-sans'>Full Name</Label>
             <Input
               id="name"
               name="name"
               type="text"
               placeholder="Enter your name"
               required
-              className="bg-[#ffede1]"
+             className="bg-green-300 font-sans"
               value={formData.name}
               onChange={handleOnChange}
              
             />
           </div>
           <div className="space-y-1">
-            <Label htmlFor="name">Email</Label>
+            <Label htmlFor="name" className='font-sans'>Email</Label>
             <Input
               id="email"
               name="email"
               type="email"
-              className="bg-[#ffede1]"
+                className="bg-green-300 font-sans"
               placeholder="Enter your email"
               required
               value={formData.email}
@@ -75,12 +75,12 @@ const Reigster = () => {
             />
           </div>
           <div className="space-y-1">
-            <Label htmlFor="name">Password</Label>
+            <Label htmlFor="name" className='font-sans'>Password</Label>
             <Input
               id="password"
               name="password"
               type="password"
-              className="bg-[#ffede1]"
+              className="bg-green-300 font-sans"
               placeholder="Enter your password"
               required
               value={formData.password}
@@ -90,15 +90,15 @@ const Reigster = () => {
           <Button
             type="submit"
            
-            className="w-full bg-black text-white hover:bg-black transition-colors"
+            className="w-full font-sans bg-black text-white hover:bg-black transition-colors"
           >
-         
+         Register
           </Button>
-          <p className="text-center text-[#3f3d56] text-sm">
+          <p className="text-center text-[#3f3d56] text-sm font-sans">
             Already have an account{" "}
             <Link
               href={"/auth/login"}
-              className="text-[#000] hover:underline font-bold"
+              className="text-[#000] hover:underline font-bold font-serif"
             >
               Sign In
             </Link>
